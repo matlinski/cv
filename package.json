@@ -1,0 +1,22 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mod.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matlinski/cv.git"
+  },
+  "author": "Mateusz Matlinski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matlinski/cv/issues"
+  },
+  "homepage": "https://github.com/matlinski/cv#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
