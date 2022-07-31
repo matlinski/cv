@@ -1,3 +1,92 @@
 body{
-    background-color: #aaa;
+    margin: 0;
+}
+body>*{
+    padding: .5em;
+}
+a{
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--primary-color);
+}
+
+/* visited link */
+a:visited {
+    color: var(--dark-color);
+}
+
+/* mouse over link */
+a:hover,
+a:focus,
+a:active {
+    color: var(--primary-color);
+}
+
+.top-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--primary-color);
+    height: 3rem;
+}
+.top-header__link{
+    width: 100%;
+    padding: .5em;
+    text-align: center;
+    transition: background-color 400ms ease-in-out;
+}
+.top-header__link:link{
+    color: var(--light-color);
+}
+
+.top-header a:hover,
+.top-header a:focus,
+.top-header a:active {
+    background-color: var(--dark-color);
+}
+@media (min-width: 800px) {
+    .top-header{
+        justify-content: start;
+        flex-direction: row;
+    }
+    .top-header__link{
+        width: auto;
+        margin: .25em;
+    }
+}
+
+.main-banner{
+    height: 20em;
+    overflow-y: scroll;
+    background-color: var(--dark-color);
+    background-color: var(--github-bg);
+}
+.main-banner *{
+    color: var(--light-color);
+}
+.blob-num-addition{
+    background-color: var(--github-num-addition-bg);
+}
+.blob-code-addition {
+    background-color: var(--github-code-addition-bg);
+}
+
+.blob-num-deletion{
+    background-color: var(--github-num-deletion-bg);
+}
+.blob-code-deletion{
+    background-color: var(--github-code-deletion-bg);
+}
+.file-header{
+    background-color: var(--github-file-header-bg);
+}
+.blob-num-hunk, .blob-num-expandable{
+    background-color: var(--github-num-hunk-bg);
+}
+.blob-code-hunk{
+    background-color: var(--github-code-hunk-bg);
 }
