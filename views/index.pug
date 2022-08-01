@@ -9,5 +9,7 @@ html
       a.top-header__link(href='tel:'+phone)= phone
       a.top-header__link(href='mailto:'+email)= email
     h1= header
-    div.main-banner!=banner
+    div.main-banner
+      .main-banner__github-overlay
+      .main-banner__github-container!=banner
     script(src="js/main.js" type="module")

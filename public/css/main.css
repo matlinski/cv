@@ -4,6 +4,9 @@ body{
 body>*{
     padding: .5em;
 }
+h1{
+    font-family: 'Courier New', Courier, monospace;
+}
 a{
     text-decoration: none;
 }
@@ -31,7 +34,7 @@ a:active {
     flex-direction: column;
     flex-grow: 1;
     background-color: var(--primary-color);
-    height: 3rem;
+    min-height: 3rem;
 }
 .top-header__link{
     width: 100%;
@@ -61,32 +64,6 @@ a:active {
 
 .main-banner{
     height: 20em;
-    overflow-y: scroll;
-    background-color: var(--dark-color);
+    overflow-y: hidden;
     background-color: var(--github-bg);
-}
-.main-banner *{
-    color: var(--light-color);
-}
-.blob-num-addition{
-    background-color: var(--github-num-addition-bg);
-}
-.blob-code-addition {
-    background-color: var(--github-code-addition-bg);
-}
-
-.blob-num-deletion{
-    background-color: var(--github-num-deletion-bg);
-}
-.blob-code-deletion{
-    background-color: var(--github-code-deletion-bg);
-}
-.file-header{
-    background-color: var(--github-file-header-bg);
-}
-.blob-num-hunk, .blob-num-expandable{
-    background-color: var(--github-num-hunk-bg);
-}
-.blob-code-hunk{
-    background-color: var(--github-code-hunk-bg);
 }
