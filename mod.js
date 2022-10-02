@@ -4,19 +4,6 @@ const fs = require('fs')
 const path = require('path');
 const app = express();
 const port = 3000;
-const configFiles = [
-  'data/config.json',
-  'public/css/vars.css'
-];
-configFiles.forEach(path=>{
-  const indexOfExt = path.lastIndexOf('.');
-  if (!fs.existsSync(path)) {
-    fs.copyFile(
-      `${path.slice(0, indexOfExt)}-example${path.slice(indexOfExt)}`,
-      path,
-      (err) => { if (err) throw err; });    
-  }
-});
 app.use(
   express.static(__dirname + '/public')
 );
