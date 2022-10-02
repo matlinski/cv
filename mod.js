@@ -1,7 +1,6 @@
 const express = require('express');
 const fs = require('fs')
-const fetch = require('node-fetch');
-const cheerio = require('cheerio');
+// const fetch = require('node-fetch');
 const path = require('path');
 const app = express();
 const port = 3000;
@@ -24,13 +23,7 @@ app.use(
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, '/views'));
 app.get('/', async (req, res) => {
-  const config = require(`${__dirname}/data/config.json`);
-  const repoReq = await fetch(`${config.repo}/cv/commit/master`);
-  const repoRes = await repoReq.text();
-  const $ = cheerio.load(repoRes);
-  const commits = $(".js-diff-progressive-container").html();
-  config.banner = commits;
-  res.render('index', config)
+  res.render('index', {})
 })
 
 app.listen(port, () => {

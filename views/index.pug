@@ -1,15 +1,6 @@
 html
   head
-    title= title
-    link(rel="stylesheet" type="text/css" href="css/vars.css")
-    link(rel="stylesheet" type="text/css" href="css/github.css")
     link(rel="stylesheet" type="text/css" href="css/main.css")
   body
-    header.top-header
-      a.top-header__link(href='tel:'+phone)= phone
-      a.top-header__link(href='mailto:'+email)= email
-    h1= header
-    div.main-banner
-      .main-banner__github-overlay
-      .main-banner__github-container!=banner
+    div#root
     script(src="js/main.js" type="module")
